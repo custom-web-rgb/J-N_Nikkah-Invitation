@@ -6,12 +6,22 @@ html {
 body {
     margin: 0;
     font-family: 'Georgia', serif;
-    
 }
 
-/* Each section = full screen */
+/* Make everything responsive */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Each section */
 .page {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 40px 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +30,6 @@ body {
 
 /* 🌸 Hero */
 .hero {
-    background: #fdf6f8;
     text-align: center;
     background: linear-gradient(rgba(3, 3, 3, 0.6),rgba(231, 126, 168, 0.7)), url("couple.jpg");
     background-repeat: no-repeat;
@@ -28,30 +37,28 @@ body {
     background-position: center;
 }
 
-
 .hero h1 {
-    font-size: 85px;
+    font-size: clamp(32px, 8vw, 85px);
     color: #09080c;
     margin-top: 3px;
-    
 }
 
-.hero h2{
-    font-size: 45px;
-    margin-top:10px;
-    margin-bottom: 48px;
+.hero h2 {
+    font-size: clamp(20px, 5vw, 45px);
+    margin-top: 10px;
+    margin-bottom: 30px;
     color: #e8c5c9;
 }
 
-.hero h3{
-    margin-top:-40px;
-}
-.hero h4{
-    margin-bottom: 26px;
-    font-size: 30px;
-    font-style: italic;
+.hero h3 {
+    margin-top: -20px;
 }
 
+.hero h4 {
+    margin-bottom: 20px;
+    font-size: clamp(16px, 4vw, 30px);
+    font-style: italic;
+}
 
 /* 📅 Calendar */
 .calendar {
@@ -60,43 +67,41 @@ body {
 
 .calendar-box {
     display: grid;
-    grid-template-columns: repeat(7, 40px);
-    gap: 30px;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 350px;
     text-align: center;
 }
 
 .day {
     font-weight: bold;
+    font-size: 12px;
 }
 
 .date {
-    padding: 8px;
+    padding: 6px;
     border-radius: 6px;
+    font-size: 12px;
 }
 
-.calendar h2{
-    font-size: 45px;
-    margin-top: 50px;
-    font-weight: -3px;
-}
-
-.calendar h3{
-    margin-bottom: 40px;
-    margin-top: 2px;
-}
-
-.calendar h1{
+.calendar h2 {
+    font-size: clamp(24px, 6vw, 45px);
     margin-top: 20px;
-    border-radius: 20px;
 }
 
-.calendar h4{
-    font-weight: lighter;
-    font-size: 20px;
-    margin-top: 2px;
+.calendar h3 {
+    margin-bottom: 20px;
 }
-.calendar-box{
-    margin-top:-12px;
+
+.calendar h1 {
+    margin-top: 20px;
+}
+
+.calendar h4 {
+    font-weight: lighter;
+    font-size: 16px;
+    margin-top: 2px;
 }
 
 /* Highlight wedding day */
@@ -109,213 +114,149 @@ body {
 /* 👰 Details */
 .details {
     background: linear-gradient(rgba(205, 189, 197, 0.7), rgba(228, 149, 198, 0.6));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-color: #5d054a;
 }
 
-/* Card design */
+/* Card */
 .card {
-    background:linear-gradient(rgba(221, 194, 219, 0.6),rgba(218, 184, 211, 0.7)), url("card-bg.jpg");
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(221, 194, 219, 0.6),rgba(218, 184, 211, 0.7)), url("card-bg.jpg");
     background-size: cover;
-    background-position: center;;
-    padding: 0px 200px;
-    width: 320px;
+    background-position: center;
+
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* Text styles */
+/* Text */
+.bismi {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
-.bismi{
-    font-size: 40px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    color: #143b04;
-}
 .top-text {
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: #555;
-}
-.bottom-text{
     font-size: 12px;
-    letter-spacing: 4px;
-    color: #555;
-    margin-bottom: 40px;
+}
+
+.bottom-text {
+    font-size: 10px;
+    margin-bottom: 20px;
 }
 
 .title {
-    font-size: 24px;
-    font-family: 'SephoraHyden', serif;
-    margin: 10px 0;
-}
-
-.of {
-    font-style: italic;
-    margin: 5px 0;
+    font-size: 18px;
 }
 
 .names {
-    font-size: 38px;
-    margin: 10px 0;
-    font-style: italic;
+    font-size: 26px;
 }
 
-.line {
-    width: 60px;
-    height: 2px;
-    background: #c9a27e;
-    margin: 15px auto;
-}
-
-.ins{
-    font-size: 30px;
+.ins {
+    font-size: 22px;
 }
 
 .date {
-    font-size: 17px;
-    margin-top: 10px;
+    font-size: 14px;
 }
 
 .time {
-    font-size: 14px;
-    color: #666;
+    font-size: 12px;
 }
 
 .venue {
-    font-size: 22px;
-    margin-top: 10px;
+    font-size: 18px;
 }
 
-.address {
-    font-size: 13px;
-    color: #777;
-}
-
+/* Button */
 .location-btn {
     display: inline-block;
-    margin-top: 18px;
-    padding: 12px 22px;
+    margin-top: 15px;
+    padding: 10px 18px;
     background: linear-gradient(45deg, #e85879, #e85f83);
     color: white;
     text-decoration: none;
-
     border-radius: 30px;
-    font-size: 15px;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
-
-.location-btn:hover {
-    transform: scale(1.05);
-}
-
-.footer {
-    margin-top: 15px;
-    font-style: italic;
     font-size: 14px;
 }
 
-/* RSVP Section */
+/* RSVP */
 .rsvp {
     background: linear-gradient(rgba(232, 155, 200, 0.8), rgba(214, 205, 209, 0.7));
 }
 
 /* Cards */
-.rsvp-card, .thank-card {
-    background:linear-gradient(rgba(221, 194, 219, 0.6),rgba(218, 184, 211, 0.7)), url("card-bg.jpg");;
-    padding: 60px 110px;
+.rsvp-card,
+.thank-card {
+    background: linear-gradient(rgba(221, 194, 219, 0.6),rgba(218, 184, 211, 0.7)), url("card-bg.jpg");
+
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    height: auto;
+
     border-radius: 12px;
     text-align: center;
-    color: #0a070a;
-    width: 500px;
-    height: 400px;
-    box-shadow: 0 10px 25px rgba(97, 4, 69, 0.2);
-    margin-top: -160px;
-    margin-bottom: -120px;
+    margin: 20px auto;
 }
 
 /* Inputs */
 .rsvp-card input {
-    width: 90%;
+    width: 100%;
     padding: 10px;
-    margin: 15px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
 }
 
 /* Button */
 .rsvp-card button {
-    margin-top: 70px;
-    padding: 20px 30px;
+    margin-top: 20px;
+    padding: 12px 20px;
     border: none;
     background: #c63254;
     color: white;
     border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.rsvp-card button:hover {
-    background: #c57a8e;
 }
 
 /* Thank card */
 .thank-card h2 {
-    color: #ca1848;
-    border-color: #111014;
-    font-family: 'SephoraHyden', serif;
-    font-style: italic;
-    font-size: 40PX;
-    
+    font-size: 28px;
 }
 
-.rsvp-message{
-    color: #423e3e;
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 60px;
+.rsvp-message {
+    font-size: 16px;
+    margin: 20px 0;
 }
 
-.countdown-begin{
-    font-size: 25px;
-    font-style: italic;
-    
+.countdown-begin {
+    font-size: 18px;
 }
 
+/* Countdown */
 .countdown-box {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 .time-box {
     background: #a51776;
-    color: #1d191b;
-    width: 80px;
-    height: 90px;
-    border-radius: 12px;
+    width: 60px;
+    height: 70px;
+    border-radius: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .time-box span {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 16px;
 }
 
 .time-box p {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #a8d5c2;
+    font-size: 10px;
 }
