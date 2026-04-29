@@ -44,8 +44,8 @@ img {
 }
 
 .hero h2 {
-    font-size: clamp(20px, 5vw, 45px);
-    margin-top: 10px;
+    font-size: 26px;
+    margin-top: 3px;
     margin-bottom: 30px;
     color: #e8c5c9;
 }
@@ -224,10 +224,12 @@ img {
     font-size: 28px;
 }
 
+
 .rsvp-message {
     font-size: 16px;
     margin: 20px 0;
 }
+
 
 .countdown-begin {
     font-size: 18px;
