@@ -12,9 +12,9 @@
 
 <!-- 🌸 Section 1: Names -->
 <section class="page hero">
-    <h4>TOGETHER WITH THEIR fAMILY</h4>
+    <h4>ᴛᴏɢᴇᴛʜᴇʀ ᴡɪᴛʜ ᴛʜᴇɪʀ ꜰᴀᴍɪʟʏ</h4>
     <h1>𝓙𝓤𝓡𝓐𝓘𝓙</h1>
-    <h2>𝖜𝖊𝖉𝖘</h2>
+    <h2>ωє∂ѕ</h2>
     <h1>𝓝𝓐𝓕𝓘𝓨𝓐</h1>
     <h3 class="date-m">MAY 16, 2026</h3>
     
@@ -95,12 +95,13 @@
 
         <h3 class="date">May 16 SAT, 2026</h3>
 
-        <p class="time">At 9:00 in the evening</p>
+        <p class="time">At 9:00AM</p>
 
-        <h2 class="venue">Your Villa</h2>
+        <h2 class="venue">SAFA Auditorium</h2>
+        <p>@Manoor</p>
 
 
-        <a href="https://maps.app.goo.gl/XwNwSByarMtYeh9b6?g_st=ac" target="_blank" class="location-btn">
+        <a href="https://maps.app.goo.gl/9h479XhTLWyrWDgr5?g_st=aw" target="_blank" class="location-btn">
     📍 View Location
 </a>
 
@@ -115,15 +116,16 @@
     <!-- RSVP FORM CARD -->
     <div class="rsvp-card" id="rsvpForm">
 
-        <h2>RSVP</h2>
+        <h2><i>Kindly Respond💖</i></h2>
 
         <form id="rsvpFormBox" onsubmit="submitRSVP(event)">
             <input type="text" id="name" placeholder="Your Name..🫶" required>
 
-            <input type="number" id="guests" placeholder="Number of Guests🙌" min="1" required>
+             <input type="text" id="prescence" placeholder="Confirm your presence (YES/NO)" min="1" required>
+
+            <input type="number" id="guests" placeholder="Number of Guests🙌"  required>
 
             <input type="text" id="wish" placeholder="Send as your blessings....🥰" min="1" required>
-
 
             <button type="submit">Submit</button>
         </form>
@@ -182,7 +184,7 @@ function submitRSVP(event) {
 
     // Personalized message
     document.getElementById("thankMessage").innerText =
-        "Thank You For Your RSVP" + " 💖";
+        "Thank You For Response" + " 💖";
 
     // Start countdown
     startCountdown();
